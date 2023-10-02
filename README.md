@@ -21,3 +21,11 @@ resource "aws_instance" "ansible_nodes" {
   }
 }
 ```
+
+Add your public key to `setup.sh`:
+
+```
+function add_ssh_keys() {
+    echo '<<add your public key>>' >> /home/ec2-user/.ssh/authorized_keys
+}
+```
